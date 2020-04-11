@@ -67,7 +67,7 @@ const send_callback = function(req, res)
     let sequence_number = json_data["sequence_number"];
 
     let now_date = new Date();
-    now_date = now_date.setHours(now_date.getHours() + 9);
+    now_date.setHours(now_date.getHours() + 9);
     now_date = now_date.toISOString().split('T');
     let year_month_day = now_date[0];
     let hour_minute_second = now_date[1].split('.')[0];
@@ -91,7 +91,7 @@ const received_callback = function(req, res)
         for (let i=0; i < results.length ; i++)
         {
             let now_date = new Date(results[i].timestamp)
-            now_date = now_date.setHours(now_date.getHours() + 9);
+            now_date.setHours(now_date.getHours() + 9);
             now_date = now_date.toISOString().split('T');
             let year_month_day = now_date[0];
             let hour_minute_second = now_date[1].split('.')[0];
